@@ -1,0 +1,78 @@
+<footer class="bg-light pt-5 pb-4 mt-5 border-top footer-bg-img">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+      <!-- Call Back Request Card -->
+        <div class="col-12 col-md-4">
+            <div class="card shadow border-0 h-100 rounded-4 footer-callback-card">
+            <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
+                <!-- Logo inside styled circle, same as phone icon before -->
+                <div class="footer-phone-icon mb-3" style="background: #e7f1ff;">
+                 <img src="/static/MSYatra-rem.png" alt="MS Connect Germany" style="max-height:90%; width:auto;" />
+                </div>
+                <h5 class="fw-bold mb-3 text-center">Call Back Request</h5>
+                <p class="mb-3 text-center small text-wrap" style="max-width: 220px;">
+                Want us to contact you? Fill out the form and our expert will get in touch.
+                </p>
+                <a href="#" class="btn btn-primary w-100 fw-semibold"
+                  data-bs-toggle="modal" data-bs-target="#scheduleCallModal">
+                  Request Call Back
+                </a>
+            </div>
+            </div>
+        </div>
+      <!-- Popular Links -->
+      <div class="col-6 col-md-2 d-flex px-5">
+        <div class="footer-column flex-fill">
+          <h6 class="fw-bold mb-3">Popular</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">Services</a></li>
+            <li><a href="{{ url_for('pricing') }}" class="footer-link">Pricing</a></li>
+            <li><a href="#" class="footer-link">Shop</a></li>
+            <!-- <li><a href="#" class="footer-link">Register for Webinar</a></li> -->
+            <li><a href="https://wa.me/9119740154" class="footer-link" target="_blank" rel="noopener noreferrer">Connect on WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Company Links -->
+      <div class="col-6 col-md-2 d-flex px-5">
+        <div class="footer-column flex-fill">
+          <h6 class="fw-bold mb-3">Company</h6>
+          <ul class="list-unstyled">
+            <li><a href="{{url_for('about')}}" class="footer-link">About</a></li>
+            <li><a href="{{ url_for('contact') }}" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Legal Links -->
+      <div class="col-6 col-md-2 d-flex px-5">
+        <div class="footer-column flex-fill">
+          <h6 class="fw-bold mb-3">Legal</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">Terms of Use</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Company Logo and Name (rightmost) -->
+      <div class="col-12 col-md-2 d-flex align-items-center justify-content-md-end justify-content-center">
+        <div class="text-md-end text-center w-100">
+          <a href="{{ url_for('home') }}">
+            <img src="/static/MSYatra-rem.png" alt="MS Connect Germany" class="mb-2" style="max-height:100%; width:100%;">
+          </a>
+          <div class="fw-bold fs-5 mt-1">MS Connect Germany</div>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4">
+  </div>
+</footer>
+
+<!-- Bootstrap Bundle JS (with Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"></script>
+<!-- Your Custom JS -->
+<script src="/static/script.js"></script>
+
+</body>
+</html>

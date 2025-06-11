@@ -1,0 +1,18 @@
+<div class="container py-5">
+  <h2 class="text-center mb-5">Latest Instagram Reels</h2>
+  <div class="row g-4">
+    {% for reel in reels %}
+    <div class="col-12 col-md-4">
+      <div class="ratio ratio-1x1">
+        <iframe 
+          src="{{ reel.embed_url }}" 
+          frameborder="0" 
+          allowfullscreen 
+          allow="autoplay; encrypted-media"
+          style="border-radius:16px;">
+        </iframe>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

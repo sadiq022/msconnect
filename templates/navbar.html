@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar shadow-sm">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="{{ url_for('home') }}">
+      <img src="/static/MSYatra-rem.png" alt="Logo" height="40" style="object-fit:contain;">
+    </a>
+
+    <!-- Hamburger for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+      aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Pricing -->
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="{{ url_for('pricing') }}">Pricing</a>
+        </li>
+
+        <!-- Services Dropdown -->
+        <li class="nav-item mx-3 dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu p-3" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="#">University Shortlisting</a></li>
+              <li><a class="dropdown-item" href="#">SOP Writing</a></li>
+              <li><a class="dropdown-item" href="#">LOR Writing</a></li>
+              <li><a class="dropdown-item" href="#">More..</a></li>
+          </ul>
+        </li>
+
+        <!-- Tools Dropdown -->
+        <li class="nav-item mx-3 dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Tools
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="toolsDropdown">
+            <li><a class="dropdown-item" href="{{ url_for('ects_calculator') }}">German Grade Calculator</a></li>
+            <li><a class="dropdown-item" href="#">ECTS Calculator</a></li>
+            <li><a class="dropdown-item" href="#">APS Checklist</a></li>
+          </ul>
+        </li>
+
+        <!-- Blog -->
+        <!-- <li class="nav-item mx-3">
+          <a class="nav-link" href="#">Shop</a>
+        </li> -->
+
+        <!-- Blog -->
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+
+        <!-- About Us -->
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="{{url_for('about')}}">About</a>
+        </li>
+
+        <!-- Contact Us -->
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Schedule 1:1 Call Button (far right) -->
+      <div class="d-flex">
+        <a href="#" class="btn btn-primary ms-lg-3" data-bs-toggle="modal" data-bs-target="#scheduleCallModal">
+          Schedule 1:1 Call
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,212 @@
+<!-- Centered Welcome Section -->
+<div class="container-fluid hero-section">
+    <div class="container py-5 my-5">
+        <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+            <h1 class="fw-bold mb-4" style="font-size:2.8rem;">
+                Welcome to <span class="text-primary">MS Connect Germany</span>
+            </h1>
+            <h2 class="fw-bold mb-4" style="font-size:2rem;">
+                Looking to Study in Germany?
+            </h2>
+            <p class="lead mb-4" style="font-size:1.4rem;">
+                You are at the right place! We will help you study in Germany.<br>
+                <span class="fw-bold text-primary">Secure your admission in Germany with the services we offer.</span>
+            </p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="admission-package">
+  <h2 class="package-title">Full Admission Assistance Package</h2>
+  <p class="package-subtitle">Comprehensive support for your academic journey abroad</p>
+  
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🎯</div>
+      <h3>University Shortlisting</h3>
+      <p>Strategic selection of best-fit universities based on your profile and aspirations</p>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon">✍️</div>
+      <h3>SOP Writing</h3>
+      <p>Compelling Statement of Purpose that highlights your unique strengths</p>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon">📜</div>
+      <h3>LOR Writing</h3>
+      <p>Powerful Letters of Recommendation from professors/employers</p>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon">📄</div>
+      <h3>CV Preparation</h3>
+      <p>Professional academic CV tailored for international applications</p>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon">📝</div>
+      <h3>Application Filling</h3>
+      <p>Meticulous completion of all university application forms</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🛫</div>
+      <h3>Post-Admission Support</h3>
+      <p>Comprehensive guidance after securing admission, including course selection strategies and verified accommodation options near your university.</p>
+    </div>
+
+    <div class="service-card highlight">
+      <div class="service-icon">🏦</div>
+      <h3>Blocked Account Solutions</h3>
+      <p>Step-by-step support for setting up mandatory blocked accounts (Germany/EU) with partner financial providers.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">💵</div>
+      <h3>Education Loan Facilitation</h3>
+      <p>End-to-end loan application assistance with vetted lenders for visa-compliant funding.</p>
+    </div>
+  </div>
+  
+  <!-- <button class="cta-button">Get Started Today</button> -->
+</div>
+
+<!-- Enhanced Social Cards Section -->
+<div class="social-cards-section">
+  <div class="social-container">
+    <h2 class="section-title">Connect With Us</h2>
+    <p class="section-subtitle">Join our community for updates and guidance</p>
+    
+    <div class="social-cards-grid">
+      <!-- WhatsApp Card -->
+      <div class="social-card whatsapp-card">
+        <div class="social-icon-container">
+          <div class="icon-circle whatsapp-bg">
+            <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp" class="social-icon">
+          </div>
+        </div>
+        <h3 class="social-card-title">Join Our WhatsApp Group</h3>
+        <p class="social-card-desc">Get instant updates and Q&A support</p>
+        <a href="https://chat.whatsapp.com/KriOfwNv0DYI90imrlVx1S" class="social-btn whatsapp-btn" target="_blank">
+          Join Now <span class="arrow">→</span>
+        </a>
+      </div>
+      
+      <!-- Instagram Card -->
+      <div class="social-card instagram-card">
+        <div class="social-icon-container">
+          <div class="icon-circle instagram-bg">
+            <img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram" class="social-icon">
+          </div>
+        </div>
+        <h3 class="social-card-title">Follow on Instagram</h3>
+        <p class="social-card-desc">Daily tips and success stories</p>
+        <a href="https://instagram.com/deutschlandgenics" class="social-btn instagram-btn" target="_blank">
+          Follow <span class="arrow">→</span>
+        </a>
+      </div>
+      
+      <!-- YouTube Card -->
+      <div class="social-card youtube-card">
+        <div class="social-icon-container">
+          <div class="icon-circle youtube-bg">
+            <img src="https://img.icons8.com/color/96/000000/youtube-play.png" alt="YouTube" class="social-icon">
+          </div>
+        </div>
+        <h3 class="social-card-title">Subscribe on YouTube</h3>
+        <p class="social-card-desc">Video guides and webinars</p>
+        <a href="https://www.youtube.com/@deutschlandgenics436" class="social-btn youtube-btn" target="_blank">
+          Subscribe <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="reviews-section">
+        <div class="section-header">
+            <h2 class="section-title">What Our Students Say</h2>
+        </div>
+        <div class="reviews-container">
+            <div class="reviews-slider" id="reviewsSlider"></div>
+        </div>
+        <div class="slider-nav" id="sliderDots"></div>
+</section>
+
+<script>
+    let currentSlide = 0;
+    const reviews = {{ reviews | tojson }};
+    const reviewsPerSlide = 3;
+    const slider = document.getElementById('reviewsSlider');
+    const dotsContainer = document.getElementById('sliderDots');
+
+    document.addEventListener("DOMContentLoaded", function () {
+        initSlider();
+        startAutoRotation();
+    });
+
+    function initSlider() {
+        const slideCount = Math.ceil(reviews.length / reviewsPerSlide);
+        
+        // Create dots
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < slideCount; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'slider-dot';
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+        
+        updateSlider();
+    }
+
+    function updateSlider() {
+        slider.innerHTML = '';
+        
+        const startIdx = currentSlide * reviewsPerSlide;
+        const endIdx = Math.min(startIdx + reviewsPerSlide, reviews.length);
+        
+        for (let i = startIdx; i < endIdx; i++) {
+            const review = reviews[i];
+            const card = document.createElement('div');
+            card.className = 'review-card';
+            
+            let starsHtml = '';
+            for (let s = 0; s < 5; s++) {
+                starsHtml += s < review.stars ? '★' : '☆';
+            }
+
+            card.innerHTML = `
+                <div class="stars">${starsHtml}</div>
+                <p class="review-text">"${review.review}"</p>
+                <div class="review-author">- ${review.name}</div>
+            `;
+
+            slider.appendChild(card);
+        }
+
+        const dots = document.querySelectorAll('.slider-dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateSlider();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % Math.ceil(reviews.length / reviewsPerSlide);
+        updateSlider();
+    }
+
+    function startAutoRotation() {
+        setInterval(nextSlide, 5000); // Rotate every 5 seconds
+    }
+</script>

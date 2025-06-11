@@ -1,0 +1,69 @@
+{% include 'header.html' %}
+
+<!-- Information Paragraph -->
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="mb-4">
+                <h4 class="fw-bold mb-2">Grade Conversion Tool</h4>
+                <p>
+                    Enter the maximum grade, the minimum passing grade, and your current overall grade in the grading system of your university.
+                    The result is the equivalent to your grade in the German grading system, where <b>1.0</b> is the maximum grade and <b>4.0</b> the minimum passing grade.
+                </p>
+                <p class="small text-muted mb-0">
+                    <b>Please note:</b> Internationally, grading systems used at institutions of higher educations may differ substantially.
+                    The result given here is non-binding, as this grade converter can only provide a general first estimation.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Calculator -->
+<div class="container">
+    <div class="calculator-box mt-4">
+        <form method="post" action="{{ url_for('ects_calculator') }}">
+            <div class="mb-3">
+                <label for="maxGrade" class="form-label">Maximum grade at your university</label>
+                <input type="number" step="any" class="form-control" id="maxGrade" name="maxGrade"
+                    value="{{ max_grade }}" placeholder="e.g., 10 or 100" required>
+            </div>
+            <div class="mb-3">
+                <label for="minGrade" class="form-label">Minimum passing grade at your university</label>
+                <input type="number" step="any" class="form-control" id="minGrade" name="minGrade"
+                    value="{{ min_grade }}" placeholder="e.g., 4 or 40" required>
+            </div>
+            <div class="mb-3">
+                <label for="currGrade" class="form-label">Your current overall grade at your university</label>
+                <input type="number" step="any" class="form-control" id="currGrade" name="currGrade"
+                    value="{{ curr_grade }}" placeholder="e.g., 7.6 or 73" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mt-3">Calculate German Grade</button>
+        </form>
+
+        {% if german_grade is not none %}
+        <div id="resultBox" class="result-box">
+            Your German grade equivalent is: <span class="fw-bold">{{ german_grade }}</span>
+        </div>
+        {% elif error %}
+        <div id="resultBox" class="result-box text-danger">
+            {{ error }}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% if german_grade is not none or error %}
+<script>
+  // Scroll to the result after form submission
+  window.onload = function() {
+    var result = document.getElementById("resultBox");
+    if (result) {
+      result.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+</script>
+{% endif %}
+
+{% include 'form.html' %}
+{% include 'footer.html' %}
