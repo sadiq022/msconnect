@@ -1,25 +1,5 @@
 h1 { color: blue; }
 
-/* Center nav links and fix dropdown menu on wide screens */
-.navbar-nav {
-  width: 100%;
-  justify-content: center;
-}
-
-.custom-navbar {
-  background-color: #bfcee4 !important; /* Soft blue, matches Bootstrap's primary tint */
-}
-
-
-.d-flex {
-    white-space:nowrap;
-}
-
-.navbar-nav .nav-link {
-    font-size: 1.15rem;   /* Increase this value for even bigger text */
-    /* font-weight: bold;    Makes the text bold */
-}
-
 .footer-link {
   color: #333;
   text-decoration: none;
@@ -701,6 +681,24 @@ h1 { color: blue; }
 
 .contact-section .contact-details a:hover {
     text-decoration: underline;
+}
+
+.pricing-page .contact-whatsapp-btn {
+  margin-top: 40px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.pricing-page .contact-whatsapp-btn .btn-success {
+  background: #3498db;
+  border: none;
+}
+.pricing-page .contact-whatsapp-btn .btn-success:hover {
+  background: #078071;
+}
+.pricing-page .contact-whatsapp-btn .btn-success i {
+  font-size: 1.3em;
+  margin-right: 7px;
+  vertical-align: -2px;
 }
 
 /* Responsive */

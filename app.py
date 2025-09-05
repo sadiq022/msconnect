@@ -3,6 +3,7 @@ from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import json
 import os
+from blog_data import blog_posts
 
 app = Flask(__name__)
 
@@ -58,8 +59,8 @@ def schedule_call():
     # flash("Your call request has been submitted!", "success")
     # return redirect(url_for('home'))
 
-@app.route("/ects-calculator", methods=["GET", "POST"])
-def ects_calculator():
+@app.route("/grade-calculator", methods=["GET", "POST"])
+def grade_calculator():
     if request.method == "POST":
         # Save result to session (temporarily)
         try:
@@ -78,7 +79,7 @@ def ects_calculator():
                 session['curr_grade'] = curr_grade
         except Exception:
             session['error'] = "Please enter all grades correctly."
-        return redirect(url_for("ects_calculator"))
+        return redirect(url_for("grade_calculator"))
 
     # On GET, show result if present, then clear session (so refresh clears everything)
     german_grade = session.pop('german_grade', None)
@@ -87,7 +88,7 @@ def ects_calculator():
     min_grade = session.pop('min_grade', "")
     curr_grade = session.pop('curr_grade', "")
     return render_template(
-        "ects_calculator.html",
+        "grade_calculator.html",
         max_grade=max_grade,
         min_grade=min_grade,
         curr_grade=curr_grade,
@@ -132,6 +133,76 @@ def contact():
 @app.route('/pricing', methods=['GET'])
 def pricing():
     return render_template("pricing.html", custom_css="/static/pricing.css")
+
+@app.route('/services/sop-writing')
+def sop_writing():
+    return render_template('service_sop.html', custom_css="/static/services.css")
+
+@app.route('/services/university-shortlisting')
+def university_shortlisting():
+    return render_template('service_university_shortlisting.html', custom_css="/static/services.css")
+
+@app.route('/services/lor-writing')
+def lor_writing():
+    return render_template('service_LOR.html', custom_css="/static/services.css")
+
+@app.route('/services/cv-preparation')
+def cv_prepare():
+    return render_template('service_cv.html', custom_css="/static/services.css")
+
+@app.route('/services/visa-sop')
+def visa_sop():
+    return render_template('service_visa_sop.html', custom_css="/static/services.css")
+
+@app.route('/services/visa-cover-letter')
+def visa_cover_letter():
+    return render_template('service_cover_letter.html', custom_css="/static/services.css")
+
+@app.route('/shop')
+def shop():
+    return render_template('shop.html', custom_css='/static/shop.css')
+
+@app.route('/blog')
+def blog():
+    return render_template('blog.html', blog_posts=blog_posts)
+
+@app.route('/blog/post/<int:post_id>')
+def blog_post(post_id):
+    # Find the post with the matching ID
+    post = next((p for p in blog_posts if p['id'] == post_id), None)
+    
+    if post:
+        return render_template('blog-post.html', post=post)
+    else:
+        # Post not found - redirect to blog listing
+        return redirect(url_for('blog'))
+
+@app.route('/ects-calculator', methods=['GET', 'POST'])
+def ects_calculator():
+    ects = None
+    error = None
+    lecture_hours = self_study_hours = weeks = None
+    if request.method == 'POST':
+        try:
+            lecture_hours = float(request.form.get('lecture_hours'))
+            self_study_hours = float(request.form.get('self_study_hours'))
+            weeks = float(request.form.get('weeks'))
+            if lecture_hours < 0 or self_study_hours < 0 or weeks <= 0:
+                error = "Please enter valid (positive) values for all fields."
+            else:
+                total_hours = (lecture_hours + self_study_hours) * weeks
+                ects = round(total_hours / 30, 2)   # Only 30, as per Germany
+        except Exception:
+            error = "Please enter valid numbers."
+    return render_template(
+        "ects_calculator.html",
+        custom_css="/static/ects_calculator.css",
+        ects=ects,
+        error=error,
+        lecture_hours=request.form.get('lecture_hours'),
+        self_study_hours=request.form.get('self_study_hours'),
+        weeks=request.form.get('weeks')
+    )
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)  # Debug mode for auto-reload

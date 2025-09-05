@@ -1,0 +1,200 @@
+:root {
+  --sop-primary: #3498db;
+  --sop-secondary: #15416e;
+  --sop-bg: #f5faff;
+  --sop-price: #e67e22;
+}
+
+.service-detail-page {
+  background: linear-gradient(120deg, #f5faff 70%, #e6eafd 100%);
+  min-height: 100vh;
+}
+
+/* Service Header */
+.service-detail-page .service-header {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.service-detail-page .service-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #3498db 70%, #41c7c7 100%);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 40px;
+  padding: 8px 24px;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.07);
+}
+
+.service-detail-page .service-header h1 {
+  color: var(--sop-secondary);
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+.service-detail-page .service-header p {
+  color: #416485;
+  font-size: 1.13rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Price Badge */
+.service-detail-page .service-price-badge {
+  background: linear-gradient(90deg, #e5e4fd 60%, #f8d7a0 100%);
+  display: inline-flex;
+  align-items: baseline;
+  border-radius: 32px;
+  padding: 10px 36px 10px 20px;
+  font-size: 1.35rem;
+  box-shadow: 0 3px 12px rgba(230,126,34,0.08);
+}
+.service-detail-page .service-price {
+  color: var(--sop-price);
+  font-weight: 800;
+  font-size: 2.3rem;
+  margin: 0 8px;
+}
+.service-detail-page .price-label {
+  color: #2ecc71;
+  font-size: 1.08rem;
+  margin-right: 5px;
+}
+.service-detail-page .price-desc {
+  color: #888;
+  font-size: 1rem;
+  margin-left: 7px;
+}
+
+.service-detail-page .delivery-time {
+  font-size: 1.04rem;
+}
+
+/* Overview & Features */
+.service-detail-page .service-image {
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  max-height: 340px;
+  object-fit: cover;
+  width: 100%;
+}
+.service-detail-page .service-features-simple {
+  list-style: disc inside;
+  margin: 0 0 18px 0;
+  padding-left: 20px;
+}
+.service-detail-page .service-features-simple li {
+  margin-bottom: 10px;
+  font-size: 1.08rem;
+  color: #185390;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.sample-section table thead th,
+.sample-section table tbody td {
+  font-size: 0.98rem;
+  text-align: left;
+  vertical-align: middle;
+}
+.sample-section .table {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.service-detail-page .service-features li b {
+  font-weight: 600;
+  color: #1165c7;
+}
+.service-detail-page .badge {
+  font-size: 1em;
+  box-shadow: 0 2px 8px rgba(52,152,219,0.08);
+}
+
+/* Why Us Section */
+.service-detail-page .why-us-section .why-box {
+  background: #fff;
+  border: 1px solid #d0e6f7;
+  transition: box-shadow 0.2s;
+}
+.service-detail-page .why-us-section .why-box:hover {
+  box-shadow: 0 4px 24px rgba(52, 152, 219, 0.12);
+}
+.service-detail-page .why-us-section h3 {
+  color: var(--sop-secondary);
+}
+
+/* FAQ */
+.service-detail-page .faq-section .accordion-button {
+  font-weight: 600;
+  background: #f6fafd;
+  color: #15416e;
+  border-radius: 8px 8px 0 0;
+}
+.service-detail-page .faq-section .accordion-item {
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #e0e9f3;
+}
+.service-detail-page .faq-section .accordion-body {
+  background: #fafdff;
+  color: #233b56;
+  font-size: 1.07rem;
+  border-radius: 0 0 8px 8px;
+}
+
+/* WhatsApp Button */
+.service-detail-page .contact-whatsapp.btn-success {
+  background: #25d366;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 40px;
+  font-size: 1.12rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.service-detail-page .contact-whatsapp.btn-success:hover {
+  background: #128c7e;
+}
+.service-detail-page .contact-whatsapp i {
+  font-size: 1.2em;
+  margin-right: 6px;
+  vertical-align: -2px;
+}
+
+.comparison-table .table {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.visa-checklist-list {
+  list-style: disc inside;
+  color: #185390;
+  font-size: 1.06rem;
+  margin: 0 0 12px 0;
+  padding-left: 22px;
+}
+
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .service-detail-page .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .service-detail-page .row.align-items-center {
+    flex-direction: column;
+  }
+  .service-detail-page .service-image {
+    margin-bottom: 22px;
+  }
+}
+@media (max-width: 576px) {
+  .service-detail-page .service-header h1 {
+    font-size: 1.35rem;
+  }
+  .service-detail-page .service-price-badge {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}

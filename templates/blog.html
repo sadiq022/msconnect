@@ -1,0 +1,124 @@
+{% extends "header.html" %}
+
+{% block title %}Study in Germany Blog | MS Connect{% endblock %}
+
+{% block content %}
+<div class="blog-container">
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Study in Germany Blog</h1>
+            <p>Your ultimate resource for studying in Germany, learning German, and navigating life as an international student</p>
+        </div>
+    </section>
+
+    <!-- Blog Filters -->
+    <section class="blog-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Topics</button>
+                <button class="filter-btn" data-filter="Study in Germany">Study in Germany</button>
+                <button class="filter-btn" data-filter="German Language">German Language</button>
+                <button class="filter-btn" data-filter="Education System">Education System</button>
+                <button class="filter-btn" data-filter="Student Life">Student Life</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="row" id="blogPostsContainer">
+                <!-- Blog posts will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="blog-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your German Journey?</h2>
+                <p>Whether you want to study in Germany or learn German, our experts are here to help you every step of the way.</p>
+                <a href="{{ url_for('contact') }}" class="cta-button">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+// Now we'll pass the blog data from Flask to JavaScript
+const blogPosts = [
+    {% for post in blog_posts %}
+    {
+        id: {{ post.id }},
+        title: "{{ post.title | replace('"', '\\"') }}",
+        excerpt: "{{ post.excerpt | replace('"', '\\"') }}",
+        content: `{{ post.content | replace('`', '\\`') | safe }}`,
+        image: "{{ post.image }}",
+        date: "{{ post.date }}",
+        category: "{{ post.category }}",
+        readTime: "{{ post.readTime }}"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+];
+
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('blogPostsContainer');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    
+    // Function to render blog posts
+    function renderBlogPosts(filter = 'all') {
+        container.innerHTML = '';
+        
+        const filteredPosts = filter === 'all' 
+            ? blogPosts 
+            : blogPosts.filter(post => post.category === filter);
+            
+        filteredPosts.forEach(post => {
+            const postCol = document.createElement('div');
+            postCol.className = 'col-md-6 col-lg-4 mb-4';
+            
+            postCol.innerHTML = `
+                <div class="blog-card" data-id="${post.id}">
+                    <div class="blog-card-image">
+                        <img src="${post.image}" alt="${post.title}">
+                        <span class="blog-category">${post.category}</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">${post.date}</span>
+                            <span class="blog-read-time">${post.readTime}</span>
+                        </div>
+                        <h3 class="blog-title">${post.title}</h3>
+                        <p class="blog-excerpt">${post.excerpt}</p>
+                        <a href="/blog/post/${post.id}" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(postCol);
+        });
+    }
+    
+    // Initial render
+    renderBlogPosts();
+    
+    // Add filter functionality
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active state
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter posts
+            const filter = this.getAttribute('data-filter');
+            renderBlogPosts(filter);
+        });
+    });
+});
+</script>
+
+{% include 'form.html' %}
+{% include 'footer.html' %}
+{% endblock %}

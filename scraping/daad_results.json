@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "course": "Additive Manufacturing",
+    "university": "Paderborn University",
+    "location": "Paderborn",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/10396/",
+    "language": "English",
+    "beginning": "Winter semester, Summer semester",
+    "duration": "4 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 2,
+    "course": "Advanced Architecture — From Urban Design to Building Construction",
+    "university": "Frankfurt University of Applied Sciences",
+    "location": "Frankfurt am Main",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/7065/",
+    "language": "English",
+    "beginning": "Summer semester",
+    "duration": "4 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 3,
+    "course": "Advanced Computational Methods in Civil Engineering",
+    "university": "RWTH Aachen University",
+    "location": "Aachen",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/6318/",
+    "language": "English",
+    "beginning": "Winter semester, Summer semester",
+    "duration": "4 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 4,
+    "course": "Advanced Industrial Engineering",
+    "university": "Rosenheim Technical University of Applied Sciences",
+    "location": "Rosenheim",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/8579/",
+    "language": "English",
+    "beginning": "Winter semester",
+    "duration": "3 semesters, 6 semesters",
+    "tuition_fees_per_semester": "varied"
+  },
+  {
+    "id": 5,
+    "course": "Advanced Manufacturing – Mechanical Engineering and Production",
+    "university": "Chemnitz University of Technology",
+    "location": "Chemnitz",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/7612/",
+    "language": "English",
+    "beginning": "Winter semester",
+    "duration": "4 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 6,
+    "course": "Advanced Materials",
+    "university": "Justus Liebig University Giessen",
+    "location": "Gießen",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/9989/",
+    "language": "English",
+    "beginning": "Winter semester",
+    "duration": "4 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 7,
+    "course": "Advanced Materials Analysis",
+    "university": "TU Bergakademie Freiberg",
+    "location": "Freiberg",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/5403/",
+    "language": "English",
+    "beginning": "Winter semester",
+    "duration": "4 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 8,
+    "course": "AI Engineering of Autonomous Systems",
+    "university": "Technische Hochschule Ingolstadt",
+    "location": "Ingolstadt",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/8922/",
+    "language": "English",
+    "beginning": "Winter semester, Summer semester",
+    "duration": "3 semesters",
+    "tuition_fees_per_semester": "EUR 500"
+  },
+  {
+    "id": 9,
+    "course": "Air Quality Control, Solid Waste and Waste Water Process Engineering (WASTE)",
+    "university": "University of Stuttgart",
+    "location": "Stuttgart",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/3676/",
+    "language": "English",
+    "beginning": "Winter semester",
+    "duration": "4 semesters",
+    "tuition_fees_per_semester": "varied"
+  },
+  {
+    "id": 10,
+    "course": "Air Transport and Logistics",
+    "university": "Dresden University of Technology",
+    "location": "Dresden",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/8911/",
+    "language": "English",
+    "beginning": "Winter semester",
+    "duration": "4 semesters, 8 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 11,
+    "course": "Analytical Instruments, Measurement and Sensor Technology (AIMS)",
+    "university": "Coburg University of Applied Sciences and Arts",
+    "location": "Coburg",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/3949/",
+    "language": "English",
+    "beginning": "Winter semester",
+    "duration": "4 semesters",
+    "tuition_fees_per_semester": "EUR 3,900"
+  },
+  {
+    "id": 12,
+    "course": "Applied Biotechnology",
+    "university": "Ansbach University of Applied Sciences",
+    "location": "Ansbach",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/7251/",
+    "language": "English",
+    "beginning": "Winter semester, Summer semester",
+    "duration": "3 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 13,
+    "course": "Applied Geosciences – Applied Mineralogy and Crystallography (AMC) (MSc)",
+    "university": "RWTH Aachen University",
+    "location": "Aachen",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/6917/",
+    "language": "English",
+    "beginning": "Winter semester, Summer semester",
+    "duration": "4 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 14,
+    "course": "Architecture – Design for the Built Environment (MA)",
+    "university": "SRH University",
+    "location": "Heidelberg",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/7730/",
+    "language": "English",
+    "beginning": "Summer semester",
+    "duration": "3 semesters",
+    "tuition_fees_per_semester": "EUR 4,740"
+  },
+  {
+    "id": 15,
+    "course": "Artificial Intelligence Aided Mobility Design (MA)",
+    "university": "Hof University of Applied Sciences",
+    "location": "Selb",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/9909/",
+    "language": "English",
+    "beginning": "Winter semester, Summer semester",
+    "duration": "3 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 16,
+    "course": "Artificial Intelligence and Robotics (MSc)",
+    "university": "Hof University of Applied Sciences",
+    "location": "Hof",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/8518/",
+    "language": "English",
+    "beginning": "Summer semester",
+    "duration": "3 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 17,
+    "course": "Automation & Control (A&C)",
+    "university": "RPTU University of Kaiserslautern-Landau",
+    "location": "Kaiserslautern",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/4818/",
+    "language": "English",
+    "beginning": "Winter semester, Summer semester",
+    "duration": "4 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 18,
+    "course": "Automation & IT (Master of Engineering)",
+    "university": "Technische Hochschule Köln (University of Applied Sciences)",
+    "location": "Gummersbach",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/3961/",
+    "language": "English",
+    "beginning": "Winter semester",
+    "duration": "4 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 19,
+    "course": "Automation and Robotics",
+    "university": "TU Dortmund University",
+    "location": "Dortmund",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/8996/",
+    "language": "English",
+    "beginning": "Winter semester",
+    "duration": "4 semesters",
+    "tuition_fees_per_semester": "none"
+  },
+  {
+    "id": 20,
+    "course": "Automotive Production Engineering & Artificial Intelligence (MEng)",
+    "university": "Technische Hochschule Ingolstadt",
+    "location": "Ingolstadt",
+    "link": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/10362/",
+    "language": "English",
+    "beginning": "Winter semester, Summer semester",
+    "duration": "4 semesters",
+    "tuition_fees_per_semester": "EUR 2,975"
+  }
+]

@@ -1,0 +1,80 @@
+.ects-hero-section {
+    background: linear-gradient(90deg, #e3f0ff 40%, #f6eaff 100%);
+    border-bottom: 1.5px solid #e9ecef;
+}
+
+.ects-title {
+    color: #254490;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+.ects-lead {
+    font-size: 1.18rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.ects-formula {
+    background: linear-gradient(90deg, #ffecb3 40%, #bbdefb 100%);
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 18px;
+    color: #1a237e;
+    font-size: 1.25rem;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(52, 90, 219, 0.14), 0 2px 8px #ffd60040;
+    margin: 18px auto 0 auto;
+    border: 2px solid #ffb300;
+    letter-spacing: 0.4px;
+    text-align: center;
+    transition: box-shadow 0.3s;
+    max-width: 100%;      /* Prevents overflow */
+    word-break: break-word; /* Breaks long lines */
+    white-space: normal;  /* Allows wrapping */
+}
+
+.ects-formula code {
+    font-size: 1.38rem;
+    color: #e65100;
+    background: none;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    word-break: break-word;
+    white-space: normal;
+    border: none;
+    padding: 0;
+    display: inline; /* Ensures it behaves like text */
+}
+
+.calculator-box {
+    border-radius: 1.3rem;
+    background: #f8faff;
+    box-shadow: 0 6px 28px rgba(52, 152, 219, 0.09);
+}
+.card.calculator-box label {
+    font-weight: 600;
+    color: #185390;
+}
+.card.calculator-box input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.18rem rgba(52,152,219,.15);
+}
+.alert-success {
+    font-size: 1.15rem;
+}
+@media (max-width: 768px) {
+    .calculator-box {
+        padding: 1rem !important;
+    }
+}
+@media (max-width: 600px) {
+    .ects-formula {
+        font-size: 1.05rem;
+        padding: 10px 7px;
+        border-radius: 12px;
+    }
+    .ects-formula code {
+        font-size: 1.07rem;
+    }
+}

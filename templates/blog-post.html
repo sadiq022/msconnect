@@ -1,0 +1,97 @@
+{% extends "header.html" %}
+
+{% block title %}{{ post.title }} | MS Connect Blog{% endblock %}
+
+{% block content %}
+<div class="blog-post-container">
+    <!-- Blog Post Content -->
+    <article class="blog-post">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog-post-header">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/blog">Blog</a></li>
+                                <li class="breadcrumb-item"><a href="/blog?category={{ post.category }}">{{ post.category }}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ post.title }}</li>
+                            </ol>
+                        </nav>
+                        
+                        <span class="blog-post-category">{{ post.category }}</span>
+                        <h1 class="blog-post-title">{{ post.title }}</h1>
+                        
+                        <div class="blog-post-meta">
+                            <span class="post-date">Published on {{ post.date }}</span>
+                            <span class="post-read-time">{{ post.readTime }}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-post-image">
+                        <img src="{{ post.image }}" alt="{{ post.title }}" class="img-fluid">
+                    </div>
+                    
+                    <div class="blog-post-content">
+                        {{ post.content | safe }}
+                    </div>
+                    
+                    <div class="blog-post-share">
+                        <h4>Share this post:</h4>
+                        <div class="share-buttons">
+                            <a href="#" class="share-btn facebook">Facebook</a>
+                            <a href="#" class="share-btn twitter">Twitter</a>
+                            <a href="#" class="share-btn linkedin">LinkedIn</a>
+                            <a href="#" class="share-btn whatsapp">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    
+    <!-- Related Posts -->
+    <section class="related-posts">
+        <div class="container">
+            <h2 class="section-title">Related Posts</h2>
+            <div class="row">
+                {% for related_post in blog_posts %}
+                    {% if related_post.category == post.category and related_post.id != post.id %}
+                    <div class="col-md-4 mb-4">
+                        <div class="blog-card">
+                            <div class="blog-card-image">
+                                <img src="{{ related_post.image }}" alt="{{ related_post.title }}">
+                                <span class="blog-category">{{ related_post.category }}</span>
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date">{{ related_post.date }}</span>
+                                    <span class="blog-read-time">{{ related_post.readTime }}</span>
+                                </div>
+                                <h3 class="blog-title">{{ related_post.title }}</h3>
+                                <p class="blog-excerpt">{{ related_post.excerpt }}</p>
+                                <a href="/blog/post/{{ related_post.id }}" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="blog-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in Studying in Germany or Learning German?</h2>
+                <p>Our expert counselors can guide you through university selection, application process, visa procedures, and German language courses.</p>
+                <a href="{{ url_for('contact') }}" class="cta-button">Get Free Consultation</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+{% include 'form.html' %}
+{% include 'footer.html' %}
+{% endblock %}

@@ -1,0 +1,145 @@
+{% include 'header.html' %}
+
+<div class="service-detail-page pb-5">
+  <div class="container">
+    <!-- Service Header -->
+    <div class="service-header text-center my-5">
+      <div class="service-badge">SOP Writing</div>
+      <h1 class="fw-bold mb-3">Professional SOP Writing Service</h1>
+      <p class="lead mb-4">
+        Get a personalized, high-impact Statement of Purpose crafted by experts studying in Germany. Maximize your admission chances, no generic templates, just your story told right!
+      </p>
+      <div class="service-price-badge mx-auto mb-3">
+        <span class="price-label">Just</span>
+        <span class="service-price">₹2,500</span>
+        <span class="price-desc">per SOP</span>
+      </div>
+      <div class="delivery-time text-muted mb-2">Delivered in <b>3-5 working days</b> | <span class="text-success">Unlimited Revisions</span></div>
+      <a href="https://wa.me/919119740154?text=Hi%20deutschlandgenics%2C%20I%20want%20to%20order%20your%20SOP%20writing%20service."
+         target="_blank"
+         class="btn btn-success btn-lg contact-whatsapp mb-2">
+        <i class="bi bi-whatsapp"></i> Order Your SOP Now
+      </a>
+    </div>
+
+    <!-- Overview & Features -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="/static/SOP_Image.jpg" alt="SOP Writing" class="img-fluid rounded shadow service-image">
+      </div>
+      <div class="col-md-6">
+      <h2 class="fw-semibold mb-3">What We Offer</h2>
+      <ul class="service-features-simple mb-4">
+        <li>Personalized one-on-one consultation to understand your journey</li>
+        <li>Unique SOP tailored for each target university</li>
+        <li>Unlimited free revisions until you’re satisfied</li>
+        <li>Compliant with German university requirements</li>
+        <li>Gap & low grade explanations (if needed)</li>
+        <li>Flawless formatting & structure for maximum impact</li>
+      </ul>
+      <div class="d-flex flex-wrap gap-2">
+        <span class="badge bg-success bg-gradient px-3 py-2">Plagiarism-free</span>
+        <span class="badge bg-primary bg-gradient px-3 py-2">Student-led team</span>
+        <span class="badge bg-warning bg-gradient px-3 py-2 text-dark">Fast Delivery</span>
+      </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="why-us-section my-5">
+      <h3 class="fw-semibold mb-4 text-center">Why Choose Us?</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="why-box h-100 p-4 rounded-4 shadow-sm text-center">
+            <i class="bi bi-person-check fs-1 text-primary mb-3"></i>
+            <h5 class="fw-bold mb-2">Student-Led Experts</h5>
+            <p>Written by students who succeeded in German admissions, real and practical guidance.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="why-box h-100 p-4 rounded-4 shadow-sm text-center">
+            <i class="bi bi-infinity fs-1 text-success mb-3"></i>
+            <h5 class="fw-bold mb-2">Unlimited Edits</h5>
+            <p>No hidden charges for changes, your satisfaction is our goal.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="why-box h-100 p-4 rounded-4 shadow-sm text-center">
+            <i class="bi bi-shield-check fs-1 text-warning mb-3"></i>
+            <h5 class="fw-bold mb-2">Confidential & Unique</h5>
+            <p>Your data is 100% private. Every SOP is written from scratch zero plagiarism.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section my-5">
+      <h3 class="fw-semibold mb-4 text-center">Frequently Asked Questions</h3>
+      <div class="accordion" id="sopFAQ">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+              How do I start my SOP order?
+            </button>
+          </h2>
+          <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#sopFAQ">
+            <div class="accordion-body">
+              Simply click the WhatsApp button above or fill out our <a href="{{ url_for('contact') }}">contact form</a>. We'll guide you every step of the way.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+              Can I request changes after the first draft?
+            </button>
+          </h2>
+          <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#sopFAQ">
+            <div class="accordion-body">
+              Yes! We offer unlimited revisions until you’re 100% satisfied.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+              How long does the SOP writing process take?
+            </button>
+          </h2>
+          <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#sopFAQ">
+            <div class="accordion-body">
+              Generally 3-5 working days. If you need it faster, let us know, we'll do our best!
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour">
+              What information do you need from me?
+            </button>
+          </h2>
+          <div id="faqCollapseFour" class="accordion-collapse collapse" data-bs-parent="#sopFAQ">
+            <div class="accordion-body">
+              We'll ask about your background, goals, target universities, achievements, and anything else that sets you apart.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive">
+              Is my information kept confidential?
+            </button>
+          </h2>
+          <div id="faqCollapseFive" class="accordion-collapse collapse" data-bs-parent="#sopFAQ">
+            <div class="accordion-body">
+              Absolutely. We never share your documents or story with anyone. Your trust is our priority.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include 'form.html' %}
+{% include 'footer.html' %}

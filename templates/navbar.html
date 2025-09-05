@@ -25,11 +25,19 @@
             data-bs-toggle="dropdown" aria-expanded="false">
             Services
           </a>
-          <ul class="dropdown-menu p-3" aria-labelledby="servicesDropdown">
-              <li><a class="dropdown-item" href="#">University Shortlisting</a></li>
-              <li><a class="dropdown-item" href="#">SOP Writing</a></li>
-              <li><a class="dropdown-item" href="#">LOR Writing</a></li>
-              <li><a class="dropdown-item" href="#">More..</a></li>
+          <ul class="dropdown-menu p-3" aria-labelledby="servicesDropdown" style="min-width: 420px;">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <li><a class="dropdown-item" href="{{ url_for('university_shortlisting') }}">University Shortlisting</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('sop_writing') }}">SOP Writing</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('lor_writing') }}">LOR Writing</a></li>
+              </div>
+              <div class="col-12 col-md-6">
+                <li><a class="dropdown-item" href="{{ url_for('cv_prepare') }}">European CV</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('visa_sop') }}">Visa SOP</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('visa_cover_letter') }}">Visa Cover Letter</a></li>
+              </div>
+            </div>
           </ul>
         </li>
 
@@ -40,20 +48,27 @@
             Tools
           </a>
           <ul class="dropdown-menu" aria-labelledby="toolsDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('ects_calculator') }}">German Grade Calculator</a></li>
-            <li><a class="dropdown-item" href="#">ECTS Calculator</a></li>
-            <li><a class="dropdown-item" href="#">APS Checklist</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('grade_calculator') }}">German Grade Calculator</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('ects_calculator') }}">ECTS Calculator</a></li>
+            <li>
+              <a class="dropdown-item" 
+                href="https://aps-india.de/wp-content/uploads/2023/05/Leaflet_BA-Graduates_English-1.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                APS Checklist
+              </a>
+            </li>
           </ul>
         </li>
 
         <!-- Blog -->
-        <!-- <li class="nav-item mx-3">
-          <a class="nav-link" href="#">Shop</a>
-        </li> -->
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="{{url_for('shop')}}">Shop</a>
+        </li>
 
         <!-- Blog -->
         <li class="nav-item mx-3">
-          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link" href="{{url_for('blog')}}">Blog</a>
         </li>
 
         <!-- About Us -->

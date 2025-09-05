@@ -15,6 +15,15 @@
     <!-- Always include the global styles -->
     <link rel="stylesheet" href="/static/style.css">
 
+    <!-- Add navbar.css after the main style.css -->
+    <link rel="stylesheet" href="/static/navbar.css">
+
+    <!-- Blog CSS -->
+    <link rel="stylesheet" href="/static/blog.css">
+
+    <!-- Blog-post CSS -->
+    <link rel="stylesheet" href="/static/blog-post.css">
+
     <!-- Optionally add a custom page stylesheet -->
     {% if custom_css %}
       <link rel="stylesheet" href="{{ custom_css }}">
@@ -22,3 +31,8 @@
   </head>
   <body>
     {% include 'navbar.html' %}
+
+    <!-- Main content block -->
+    <main>
+      {% block content %}{% endblock %}
+    </main>
